@@ -213,7 +213,7 @@ document.writeln("                                                        </a>")
 document.writeln("                                                        <ul class=\'wp-block-navigation__submenu-container wp-block-navigation-submenu\'>");
 document.writeln("                                                            <li class=\' wp-block-navigation-item wp-block-navigation-link\'>");
 document.writeln("                                                                <a class=\'wp-block-navigation-item__content\' href=\'static/link/04/001.html\'>");
-document.writeln("                                                                    <span class=\'wp-block-navigation-item__label\'>科学上网工具下载</span>");
+document.writeln("                                                                    <span class=\'wp-block-navigation-item__label\'>科学上网工具下载（翻墙）</span>");
 document.writeln("                                                                </a>");
 document.writeln("                                                            </li>");
 document.writeln("                                                            <li class=\' wp-block-navigation-item wp-block-navigation-link\'>");
