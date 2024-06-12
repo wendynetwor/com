@@ -1,24 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
+	<html lang="zh-CN">
+	<head>
+	<script type="text/javascript" src="https://wendy-tools.com/static/link/dh.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://wendy-tools.com/static/link/tools/jQueryColor/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="https://wendy-tools.com/static/link/tools/jQueryColor/css/default.css">
+	<link rel="stylesheet" type="text/css" href="https://wendy-tools.com/static/link/tools/jQueryColor/css/jquery.classycolor.min.css" />
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<script type="text/javascript" src="https://wendy-tools.com/static/link/dh.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>quill.js-强大的现代富文本编辑器插件</title>
-	<link rel="stylesheet" type="text/css" href="https://wendy-tools.com/static/link/tools/editor/css/bootstrap-grid.min.css">
-	<link rel="stylesheet" type="text/css" href="https://wendy-tools.com/static/link/tools/editor/css/htmleaf-demo.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/monokai-sublime.min.css"/>
-	<link href="https://wendy-tools.com/static/link/tools/editor/css/themes/quill.snow.css" rel="stylesheet">
-	<style type="text/css">
-		#editor-container {
-		  height: 500px;
-		}
-	</style>
-	<!--[if IE]>
-		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
-	<![endif]-->
+</head>
+
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
@@ -38,16 +29,90 @@
 <body>
 	<div class="htmleaf-container">
 		<header class="htmleaf-header">
-			<h1>静态工具在线</h1>
+			<h1>静态在线工具</h1>
 			<div class="htmleaf-demo center">
-			  <a href="https://wendy-tools.com/static/link/tools/Excel/index.html" class="current">类基Excel表格编辑器</a>
+			  <a href="https://wendy-tools.com/static/link/tools/Excel/index.html" class="current">类Excel表格编辑器</a>
 			  <a href="https://wendy-tools.com/static/link/tools/jQueryColor/index.html">颜色选择器</a>
 			  <a href="https://wendy-tools.com/static/link/tools/Filerobot/index.html">图片编辑器</a>
 			  <a href="https://wendy-tools.com/static/link/tools/Excel/index.html">Markdown编辑器</a>
 			  <a href="https://wendy-tools.com/static/link/tools/index.html">返回上级菜单</a>
 			</div>
 		</header>
+
+		
+		<div class="code">
+			<pre>
 <body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>jQuery颜色选择器插件</span></h1>
+		</header>
+			<div class="example">
+				<div class="color-box">
+					<span>rgba： </span><div class="classypicker1"></div>
+				</div>
+				<div class="color-box">
+					<span>rgb： </span><div class="classypicker2"></div>
+				</div>
+				<div class="color-box">
+					<span>hsla： </span><div class="classypicker3"></div>
+				</div>
+				<div class="color-box">
+					<span>hsl： </span><div class="classypicker4"></div>
+				</div>
+			</div>
+	</div>
+	
+	<script src="https://wendy-tools.com/static/link/tools/jQueryColor/js/jquery-2.1.1.min.js"></script>
+	<script src="https://wendy-tools.com/static/link/tools/jQueryColor/js/jquery.classycolor.min.js"></script>
+	<script>
+        $(document).ready(function () {
+            $('.classypicker1').ClassyColor({
+                color: '#ed1978',
+                colorSpace: 'rgba',
+                labels: true,
+                displayColor: 'css',
+
+            });
+            $('.classypicker2').ClassyColor({
+                color: '#653298',
+                colorSpace: 'rgb',
+                labels: true,
+                displayColor: 'hex'
+            });
+            $('.classypicker3').ClassyColor({
+                color: '#ffcc00',
+                colorSpace: 'hsla',
+                labels: true,
+                displayColor: 'css'
+            });
+            $('.classypicker4').ClassyColor({
+                color: '#f64747',
+                colorSpace: 'hsl',
+                labels: true,
+                displayColor: 'hex'
+            });
+        });
+    </script>
+</body>
+ <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="https://wendy-tools.com/static/link/tools/editor/css/themes/quill.snow.css" rel="stylesheet">
+	<style type="text/css">
+		#editor-container {
+		  height: 500px;
+		}
+	</style>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>quill.js-强大的现代富文本编辑器插件</h1>
+		</header>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 mt50">
@@ -117,5 +182,5 @@
 		    theme: 'snow'
 		  });
 	</script>
-</body>
-</html>
+</body>   
+    </html>
