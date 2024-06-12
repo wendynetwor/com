@@ -1,0 +1,1 @@
+(HTMLScriptElement.supports && HTMLScriptElement.supports("importmap")) || document.write('<script src="js/15.js?ver=1.8.2"></scr' + 'ipt>');
