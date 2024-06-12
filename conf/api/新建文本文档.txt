@@ -1,0 +1,60 @@
+<script src="http://www.htmleaf.com/js/jquery/2.1.1-rc2/jquery.min.js"></script>
+	<style>
+	        .content{
+	            width: 1000px;
+	            margin: 10px auto;
+	        }
+	        .content pre{
+	            position: relative;
+	            background-color: #f5f5f5;
+	            border: 1px solid #ccc;
+	            border-radius: 4px;
+	            padding: 10px;
+	        }
+	        pre .btn-pre-copy{
+	            -webkit-user-select: none;
+	            -moz-user-select: none;
+	            -ms-user-select: none;
+	            -khtml-user-select: none;
+	            user-select: none;
+	            position: absolute;
+	            top: 10px;
+	            right: 12px;
+	            font-size: 12px;
+	            line-height: 1;
+	            cursor: pointer;
+	            color: hsla(0,0%,54.9%,.8);
+	            transition: color .1s;
+	        }
+	        textarea{
+	            width: 100%;
+	        }
+	</style> </body>
+</head>
+
+<script src="copy.js"></script>
+
+    <!-- 1. Define some markup -->
+    <button data-clipboard-text="">AccessKey ID</button>
+    <button data-clipboard-text="">AccessKey secret</button>
+    <button data-clipboard-text="curl --request GET --url https://api.cloudflare.com/client/v4/zones/8bee8de93e8cdd5d0a29e4fa88e21934/dns_records --header 'Content-Type: application/json' --header 'X-Auth-Email: wendyno01@outlook.com' --header 'X-Auth-Key: 1d9fa69527aa931384b980507c18d9a086dbc'">命令行发送请求</button>
+
+    <!-- 2. Include library -->
+    <script src="https://js.wd-wd.top/wdcopy/dist/clipboard.min.js"></script>
+
+    <!-- 3. Instantiate clipboard by passing a list of HTML elements -->
+    <script>
+    var btns = document.querySelectorAll('button');
+    var clipboard = new Clipboard(btns);
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
+	<div class="content"><pre></pre></div>
+  </body>
+</html>

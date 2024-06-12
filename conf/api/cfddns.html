@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cloudflare DDNS API在线调试</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="htmleaf-demo.css">
+	<link href="https://js.wd-wd.top/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<style type="text/css">
+		.copydiv{
+			border: 1px solid #fff;
+			padding: 1em 0;
+		}
+	</style>
+</head>
+<body>
+	<header class="htmleaf-header">
+		<div class="htmleaf-demo center">
+		  <a href="alddns.html">阿里云DDNS</a>
+		  <a href="cfddns.html">Cloudflare DDNS</a>
+		</div>
+	</header>
+  <body>
+  <div class="container-fluid top">
+    <div class="col-sm-12">
+      <div style="text-align: center;"><div class="title"><h1>泛播 DDNS API链接自动生成</h1></a></div>
+    </div>
+    <div class="col-sm-4 fix">
+      <form class="form-horizontal">
+        <div class="alert alert-success" role="alert"><b><h3>域名信息填写区</b><br>红色的标题的为必填项<br>点一下输入框外面右侧会自动生成链接</h3></div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label red">AccessKey ID</label>
+          <div class="col-xs-8">
+            <input type="text" class="form-control" id="id" placeholder="请输入ID(必填)" onchange="tourl();" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label red">AccessKey secret</label>
+          <div class="col-xs-8">
+            <input type="text" class="form-control" id="token" placeholder="请输入secret(必填)" onchange="tourl();" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label red">域名</label>
+          <div class="col-xs-8">
+            <input type="text" class="form-control" id="domain" placeholder="请输入域名(必填)" onchange="tourl();" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label red">记录名</label>
+          <div class="col-xs-8">
+            <input type="text" class="form-control" id="sub" placeholder="请输入记录名(必填)" onchange="tourl();" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label">IP</label>
+          <div class="col-xs-8">
+            <input type="text" class="form-control" value="113.90.223.154" id="ip" onchange="tourl();" placeholder="请输入IP" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label">线路</label>
+          <div class="col-xs-8">
+            <select class="form-control" id="line" onchange="tourl();">
+              <option value=" ">自动识别-无需选择</option>
+              <option value="default">默认</option>
+              <option value="ctc">电信</option>
+              <option value="cucc">联通</option>
+              <option value="cernet">教育网</option>
+              <option value="cmcc">移动</option>
+              <option value="ctt">铁通</option>
+              <option value="home">国内</option>
+              <option value="abord">国外</option>
+              <option value="search">搜索引擎</option>
+              <option value="baidu">百度</option>
+              <option value="google">谷歌</option>
+              <option value="youdao">有道</option>
+              <option value="bing">必应</option>
+              <option value="soso">搜搜</option>
+              <option value="sogou">搜狗</option>
+              <option value="qihu">奇虎</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4 control-label">记录类型</label>
+          <div class="col-xs-8">
+            <select class="form-control" id="type"  onchange="tourl();">
+              <option value=" ">非必选</option>
+              <option value="A">IPv4</option>
+              <option value="AAAA">IPv6</option>
+              <option value="CNAME">CNAME</option>
+              <option value="MX">MX</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-8 fix">
+      <div class="form-horizontal">
+      <div class="alert alert-success" role="alert"><b><h3>域名自动生成区</b><br>点击复制，复制到粘贴板<br>点击访问，发送请求</h3></div>
+        <div class="box">
+          <label>生成解析参数（带IP）：</label>
+          <div class="input-group">
+            <input type="text" id="url_0" class="form-control" onclick="copyUrl(0)" placeholder="自动生成链接" readonly>
+            <span class="input-group-addon" id="basic-addon2" onclick="copyUrl(0)">复制</span>
+          </div>
+        </div>
+        <div class="box">
+          <label>生成解析参数（不带IP）：</label>
+          <div class="input-group">
+            <input type="text" id="url_1" class="form-control" onclick="copyUrl(1)" placeholder="自动生成链接" readonly>
+            <span class="input-group-addon" id="basic-addon2" onclick="copyUrl(1)">复制</span>
+          </div>
+        </div>
+        <div class="box">
+          <label>生成本站API解析链接（带IP）：</label>
+          <div class="input-group">
+            <input type="text" id="url_2" class="form-control"  onclick="copyUrl(2)" placeholder="自动生成链接" readonly>
+            <span class="input-group-addon" id="basic-addon2" onclick="copyUrl(2)">复制</span>
+            <span class="input-group-addon" id="basic-addon2" onclick="tolink(2)">访问</span>
+          </div>
+        </div>
+        <div class="box">
+          <label>生成本站API解析链接（不带IP）：</label>
+          <div class="input-group">
+            <input type="text" id="url_3" class="form-control"  onclick="copyUrl(3)" placeholder="自动生成链接" readonly>
+            <span class="input-group-addon" id="basic-addon2" onclick="copyUrl(3)">复制</span>
+            <span class="input-group-addon" id="basic-addon2" onclick="tolink(3)">访问</span>
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+  <script type="text/javascript" scr="cfddns.js"></script>
+  </body>
+</html>
