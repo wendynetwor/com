@@ -1,16 +1,18 @@
+
+
 .main .box .sub-category > div {
   padding: 12px 0 0 2.1%;
-  font-size: 18px;
+  font-size: 28px;
 }
 .main .box .item {
-  width: 40%;
+  width: 30%; /块宽度/
   border: 1px solid #e4ecf3;
-  box-shadow: 1px 2px 3px #f2f6f8;
+  box-shadow: #9900FF;
   border-radius: 6px;
-  background: #0b1a1c;
+  background: #050b08;/块颜色/
   padding: 10px;
-  min-width: 200px;
-  margin: 22px 0 0 2.1%;
+  min-width: 30%;
+  margin: 22px 0 0 2.1%;#05f750
   float: left;
   overflow: hidden;
   transition: all .3s;
