@@ -12,7 +12,7 @@ document.writeln("	<link rel=\'stylesheet\' href=\'/static/css/bootsnav.css\'>")
 document.writeln("	<link rel=\'stylesheet\' type=\'text/css\' href=\'/static/css/htmleaf-demo.css\'>");
 document.writeln("        <style>");
 document.writeln("        body {");
-document.writeln("            background-image: url(\'/static/images/picture/loginbg.png\');");
+document.writeln("            background-image: url(\'/static/images/picture/featured-content-3.jpg\');");
 document.writeln("            background-size: cover; /* 背景图片覆盖整个容器 */");
 document.writeln("            background-repeat: no-repeat; /* 背景图片不重复 */");
 document.writeln("            opacity: 1.5; /* 背景图片透明度 */");
