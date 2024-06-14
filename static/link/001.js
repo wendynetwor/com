@@ -8,8 +8,8 @@ document.writeln("	<meta name=\'viewport\' content=\'width=device-width, initial
 document.writeln("    <title>Wendy-Network &#8211;文迪网络</title>");
 document.writeln("	<link href=\'https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css\' rel=\'stylesheet\'>");
 document.writeln("	<link href=\'https://cdn.bootcss.com/font-awesome/5.1.0/css/all.css\' rel=\'stylesheet\'>");
-document.writeln("	<link rel=\'stylesheet\' href=\'/static/zj/002/css/bootsnav.css\'>");
-document.writeln("	<link rel=\'stylesheet\' type=\'text/css\' href=\'/static/zj/002/css/htmleaf-demo.css\'>");
+document.writeln("	<link rel=\'stylesheet\' href=\'/static/css/bootsnav.css\'>");
+document.writeln("	<link rel=\'stylesheet\' type=\'text/css\' href=\'/static/css/htmleaf-demo.css\'>");
 document.writeln("        <style>");
 document.writeln("        body {");
 document.writeln("            background-image: url(\'/static/images/picture/loginbg.png\');");
